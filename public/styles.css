@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  flex-flow: wrap;
+  max-width: 1280px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: lightseagreen;
+  flex-basis: 25%;
+}
+
+nav {
+  font-family: 'Open Sans', sans-serif;
+}
+
+nav > ul {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+
+}
+
+ul > li {
+  flex-basis: 50%;
+  text-align: center;
+  list-style: none;
+  transition-duration: 1500ms;
+
+}
+
+ul > li:hover {
+  background-color: #97DCE8;
+  color: #47626B
+}
+
+.profile {
+  margin: 5px;
+  flex-basis: 20%;
+  height: 250px;
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+  justify-content: center;
+  border: solid 1px aliceblue;
+  border-radius: 5px;
+  transition-duration: 1000ms;
+}
+
+.employed:hover {
+  background-color: grey;
+}
+.unemployed:hover {
+  background-color: #3EC1E8;
+  color: grey;
+}
+
+.info {
+  display: inline-grid;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+.image {
+  align-self: center;
+}
+
+.jobless {
+  color: red;
+}

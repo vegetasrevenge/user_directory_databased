@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User Directory</title>
+    <link rel="Stylesheet" href="/styles.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
+  <body>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="/hire"><h1>Hire Us!</h1></a>
+        </li>
+        <li>
+          <a href="/employed"><h1>Our Employed Recruits</h1></a>
+        </li>
+      </ul>    
+    </nav>
+
+
+
+    <div class="container">
+
+      {{#users}}
+        <a href="/details/{{id}}">
+        {{ #job }}
+        <div class="profile employed" >
+        {{ /job }}
+        {{ ^job }}
+        <div class="profile unemployed" >
+        {{ /job }}
+          <img class="image" src="{{avatar}}"/>
+          <div class="info">
+            <span>{{name}}</span>
+            <span>
+              {{#job}}
+                {{job}}
+              {{/job}}
+              {{^job}}
+              <div class="jobless">
+                Available for Hire!
+              </div>
+              {{/job}}
+            </span>
+            <span>{{company}}</span>
+          </div>
+        </div>
+        </a>
+      {{/users}}
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "user-directory",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "mongodb": "^2.2.30",
+    "mustache-express": "^1.2.5",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vegetasrevenge/jul25_userDirectory.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vegetasrevenge/jul25_userDirectory/issues"
+  },
+  "homepage": "https://github.com/vegetasrevenge/jul25_userDirectory#readme",
+  "description": ""
+}

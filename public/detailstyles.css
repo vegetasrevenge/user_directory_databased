@@ -1,0 +1,69 @@
+body {
+  width: 960px;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.profileContainer {
+  display: flex;
+  align-content: center;
+  flex-flow: column;
+  margin: 300px auto;
+}
+
+.profileImage {
+  border: solid;
+  border-radius: 100px;
+  margin-right: 10px;
+  width: 20%;
+}
+
+.jobless {
+  color: red;
+}
+
+.profileTop {
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.profileBottom {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.education {
+  display: flex;
+  width: 100%;
+}
+
+
+.edTitle {
+  font-weight: bold;
+  flex-basis: 31%;
+  text-align: right;
+  margin-right: 10px;
+
+}
+
+.edInfo {
+  flex-basis: 50%;
+}
+
+.skills {
+  display: flex;
+  width: 100%;
+}
+
+.skillsTitle {
+  font-weight: 700;
+  flex-basis: 31%;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.skillsInfo {
+  flex-basis: 50%;
+}
