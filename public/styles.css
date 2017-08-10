@@ -27,7 +27,7 @@ ul > li {
   flex-basis: 50%;
   text-align: center;
   list-style: none;
-  transition-duration: 1500ms;
+  transition-duration: 100ms;
 
 }
 
