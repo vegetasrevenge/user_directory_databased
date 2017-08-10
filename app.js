@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
 const session = require('express-session');
+const passport = require('passport');
 
 const userRoutes = require('./routes/users');
 const authRoutes = require('./routes/auth');
@@ -14,6 +15,17 @@ mongoose.connect('mongodb://localhost:27017/user-directory', {
 mongoose.Promise = global.Promise;
 
 app.use(express.static('public'));
+
+//session
+app.use(session({
+  secret: 'ooooooweeeeeee',
+  resave: false,
+  saveUninitialized: false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+require('./passportconfig').configure(passport);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
