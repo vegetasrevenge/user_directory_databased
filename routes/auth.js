@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const User = require('../models/user');
 const passport = require('passport');
+const mongoose = require('mongoose');
 
 
 router.get('/login', (req, res) => {
@@ -29,6 +30,15 @@ router.post('/register', (req, res, next) => {
     res.redirect('/');
   }
   });
+});
+
+router.get('/edit', (req, res) => {
+  res.render('edit');
+});
+
+router.post('/edit', (req, res) => {
+  const user = User.findByIdAndUpdate(req.params.id, {$set: req.body}, //last function here )
+
 });
 
 module.exports = router;

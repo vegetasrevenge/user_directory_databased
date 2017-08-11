@@ -27,7 +27,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 require('./passportconfig').configure(passport);
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //Doug clued this in: http://www.douglashirsh.com/2017/07/26/node-express-mustache-template-caching/
 const mustacheInstance = mustache();

@@ -39,14 +39,12 @@ const userSchema = new Schema ({
     type: String
   },
   address: {
-    type: {
       street_num: String,
       street_name: String,
       city: String,
       state_or_province: String,
       postal_code: String,
       country: String,
-    }
   }
 });
 
