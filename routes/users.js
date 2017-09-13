@@ -14,6 +14,14 @@ router.get('/details/:id', function(req, res){
   })
 });
 
+router.get('/edit/:id', (req, res) => {
+  let userId = req.params.id;
+  Users.findById(userId)
+    .then((results => {
+      res.render('edit', results);
+    }))
+});
+
 router.get('/hire', function(req, res){
   Users.find({ job: null }).then(function(results) {
     res.render('hire', { users: results })
@@ -23,7 +31,7 @@ router.get('/hire', function(req, res){
 router.get('/employed', function(req, res){
   Users.find({ job: {$type: 2} }).then(function(results) {
     res.render('employed', { users: results })
-    console.log(results);
+    // console.log(results);
   })
 });
 

@@ -19,7 +19,7 @@ router.get('/register', (req, res) => {
 
 router.post('/register', (req, res, next) => {
   const user = new User({username: req.body.username, password:
-  req.body.password });
+  req.body.password});
   user.save((err) => {
     if(err) {
       console.log('There was an error while saving the user.', err);
@@ -32,13 +32,16 @@ router.post('/register', (req, res, next) => {
   });
 });
 
-router.get('/edit', (req, res) => {
-  res.render('edit');
-});
 
-router.post('/edit', (req, res) => {
-  const user = User.findByIdAndUpdate(req.params.id, {$set: req.body})
-  res.redirect('index');
+
+router.post('/edit/:id', (req, res) => {
+  const user = User.findByIdAndUpdate(req.params.id, {$set: req.body}, (err, result) => {
+    if (err) {
+      console.log(err);
+    }
+    console.log("RESULT: " + result);
+    res.redirect('/');
+  })
 });
 
 module.exports = router;
