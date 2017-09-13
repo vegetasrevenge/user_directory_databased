@@ -37,8 +37,8 @@ router.get('/edit', (req, res) => {
 });
 
 router.post('/edit', (req, res) => {
-  const user = User.findByIdAndUpdate(req.params.id, {$set: req.body}, //last function here )
-
+  const user = User.findByIdAndUpdate(req.params.id, {$set: req.body})
+  res.redirect('index');
 });
 
 module.exports = router;
